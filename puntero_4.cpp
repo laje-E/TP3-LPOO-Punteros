@@ -7,29 +7,43 @@ int main () {
 	int num2 [n];
 	vector (num1, num2, n);
 	
-	copia (&num1[n], &num2[n], n);
+	copia (num1[n], num2[n], n);
 	
 }
 void vector (int num1[], int num2[], int n){
     for (int i = 0; i<n ; i++){
-        printf ("ingrese del vector 1 el numero nº %d", i);
+        printf ("ingrese del vector 1 el numero nº %d ", i);
         scanf ("%d", num1[i]);
     }
-    for (i = 0; i<n ; i++){
-        printf ("ingrese del vector 1 el numero nº %d", i);
+    for (int i = 0; i<n ; i++){
+        printf ("ingrese del vector 1 el numero nº %d ", i);
         scanf ("%d", num2[i]);
     }
-    printf ("los vectores originales son:");
-    for (i=0;i<n;i++){
+    printf ("los vectores originales son: ");
+    printf ("vector 1 ");
+    for (int i=0;i<n;i++){
         printf ("nº%d : %d", i, num1);
     }
+    printf ("vector 2 ");
+    for (int i=0;i<n;i++){
+        printf ("nº%d : %d", i, num2);
+    }
+    
 }
 
-void copia (int *num1[], int *num2[], int n){
+void copia (int num1[], int num2[], int n){
 	for (int i = 0; i<n ; i++){
-		aux = num1[i];
+		int aux = num1[i];
 		num1[i] = num2[i];
 		num2[i] = aux;
 	}
-	printf ("los vectores cambiados son:");
+	printf ("los vectores cambiados son: ");
+    printf ("vector 1 ");
+    for (int i=0;i<n;i++){
+        printf ("nº%d : %d", i, num1);
+    }
+    printf ("vector 2 ");
+    for (int i=0;i<n;i++){
+        printf ("nº%d : %d", i, num2);
+    }
 }
