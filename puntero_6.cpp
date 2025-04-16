@@ -21,13 +21,13 @@ void crear_palabra (char palabra1 [20], char palabra2 [20]){
 }
 
 void ocurrencias (char palabra1 [20], char palabra2 [20], int n, int m) {
+    int cant_ocurrencias;
     for (int i=0;i<n;i++){
         for (int j=0;j<m;j++){
-            strcmp(palabra1 [i], palabra2 [j]);
             if (strcmp(palabra1 [i], palabra2 [i]) == 0){
-                int cant_ocurrencias = cant_ocurrencias + 1;
+                cant_ocurrencias = cant_ocurrencias + 1;
             }
         }
     }
-    printf ("la cantidad de ocurrencias es: %d", )
+    printf ("la cantidad de ocurrencias es: %d", cant_ocurrencias);
 }
